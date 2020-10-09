@@ -1,5 +1,12 @@
 Demo App show casing DeepLinking using Androidx Navigation
 
+Testing
+=======
+Use the following adb command to trigger external deeplink.
+```
+adb shell am start -a android.intent.action.VIEW -d "deeplinker://building/level1/GREEN/level2/RED"
+```
+
 License
 =======
 
