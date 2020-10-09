@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DeepLinker</string>
+    <string name="code">Code: %s</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav.xml"
+    app:startDestination="@+id/outsideFragment"
+    >
+
+    <fragment
+        android:id="@+id/outsideFragment"
+        android:name="com.vikingsen.deeplinker.OutsideFragment"
+        android:label="Outside"
+        >
+        <action
+            android:id="@+id/action_to_lobbyFragment"
+            app:destination="@+id/lobbyFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lobbyFragment"
+        android:name="com.vikingsen.deeplinker.LobbyFragment"
+        android:label="Lobby"
+        >
+        <action
+            android:id="@+id/action_to_level1Fragment"
+            app:destination="@+id/level1_nav"
+            >
+            <argument
+                android:name="code1"
+                app:argType="string"
+                />
+        </action>
+    </fragment>
+
+    <include app:graph="@navigation/level1_nav" />
+</navigation>

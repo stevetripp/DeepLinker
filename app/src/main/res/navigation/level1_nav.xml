@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/level1_nav"
+    app:startDestination="@+id/level1Fragment"
+    >
+    <fragment
+        android:id="@+id/level1Fragment"
+        android:name="com.vikingsen.deeplinker.Level1Fragment"
+        android:label="Level 1"
+        >
+        <deepLink app:uri="deeplinker://building/level1/{code1}" />
+        <argument
+            android:name="code1"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_to_level2Fragment"
+            app:destination="@+id/level2_nav"
+            >
+            <argument
+                android:name="code2"
+                app:argType="string"
+                />
+        </action>
+    </fragment>
+    <include app:graph="@navigation/level2_nav" />
+</navigation>
